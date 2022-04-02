@@ -49,10 +49,7 @@ export const store = (req, res) => {
 export const update = (req, res) => {
   // edita un story
   const { id } = req.params;
-  const { name } = req.body;
-  const { author } = req.body;
-  const { image } = req.body;
-  const { description } = req.body;
+  const { name, author, image, description } = req.body;
   try {
     const search = stories.find((story) => story.id === parseInt(id));
     if (search < 0) {
